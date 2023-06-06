@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../utils/NavBar.js'
 
 const MainPage = () => {
   const [posts, setPosts] = useState([]);
@@ -20,19 +21,7 @@ const MainPage = () => {
 
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
-          <li>
-            <Link to="/messages">Private Messages</Link>
-          </li>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
       <h1>Yume - Social Media</h1>
       <h2>Your Posts:</h2>
       {posts.map((post) => (
